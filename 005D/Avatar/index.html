@@ -4,20 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de inicio</title>
-    <style>
-        p{
-            color: rgb(0, 81, 54);
-        }
-        body{
-           background-image: url(img/prod.jpg);
-           background-size: cover;
-        }
-    .cero{
-         color: rgb(59, 0, 186);
-    }
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-
-    </style>
 </head>
 <body >
     
@@ -28,9 +18,35 @@
         <li><a href="contacto.html">Contactanos</a></li>
 
     </ul>
-    <h1 style="color: rgb(43, 1, 83);">Primer titulo HTML</h1>
-   
-    <p class="cero">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. <br>
+    <h1 style="color:red;">Primer titulo HTML</h1>
+    <!-- Inico de carrusel -->
+     <div id="carouselExample" class="carousel slide" data-bs-ride="true">
+  <div  id="carouselExampleAutoplaying" class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    <!-- FIN de carrusel -->
+
+
+
+   <div class="container text-center" >
+    <p class="colorUnico">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. <br>
          Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
           cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó 
           una galería de textos y los mezcló de tal manera que logró hacer un libro de textos
@@ -38,9 +54,12 @@
     <p>Este es otro parrafo diferente</p> 
     <p>Este es otro parrafo diferente</p> 
     <p>Este es otro parrafo diferente</p> 
-    <p>Este es otro parrafo diferente</p> 
+    <p class="colorUnico" >Este es otro parrafo diferente</p> 
     <p>Este es otro parrafo diferente</p> 
      
            <img src="img/sc.webp" alt="Imgane de muestra">
+
+   </div>
+    
 </body>
 </html>

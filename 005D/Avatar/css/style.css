@@ -1,0 +1,16 @@
+p{
+    color:blue;
+    margin-top: 40px;
+
+}
+
+body{
+    background-color: rgb(0, 185, 102);
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.colorUnico{
+        color: rgb(205, 5, 155);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
