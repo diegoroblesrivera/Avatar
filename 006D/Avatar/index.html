@@ -4,20 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de inicio</title>
-    <style>
-        p{
-            color: rgb(0, 81, 54);
-        }
-        body{
-           background-image: url(img/prod.jpg);
-           background-size: cover;
-        }
-    .cero{
-         color: rgb(59, 0, 186);
-    }
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 
-    </style>
 </head>
 <body >
     
@@ -28,9 +19,44 @@
         <li><a href="contacto.html">Contactanos</a></li>
 
     </ul>
-    <h1 style="color: rgb(43, 1, 83);">Primer titulo HTML</h1>
+    <h1 class="colorDiferente">Primer titulo HTML</h1>
+    <div class="container">
+        <table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Usuario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+    <div  class="container text-center" >
+        
    
-    <p class="cero">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. <br>
+    <p class="colorDiferente">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. <br>
          Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
           cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó 
           una galería de textos y los mezcló de tal manera que logró hacer un libro de textos
@@ -38,9 +64,11 @@
     <p>Este es otro parrafo diferente</p> 
     <p>Este es otro parrafo diferente</p> 
     <p>Este es otro parrafo diferente</p> 
-    <p>Este es otro parrafo diferente</p> 
+    <p class="colorDiferente fondoOwo">Este es otro parrafo diferente</p> 
     <p>Este es otro parrafo diferente</p> 
      
            <img src="img/sc.webp" alt="Imgane de muestra">
+    </div>
+
 </body>
 </html>
