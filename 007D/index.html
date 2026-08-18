@@ -21,14 +21,38 @@
     </style>
 </head>
 <body >
-    
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="contacto.html">Contactanos</a></li>
 
-    </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="productos.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="albunes.html">Albunes</a>
+        </li>
+
+       
+
+      </ul>
+      
+    </div>
+  </div>
+</nav>
     <h1 style="color: rgb(43, 1, 83);">Primer titulo HTML</h1>
      <div class="container text-center">
   <div class="row" style="border-color:rgb(43, 1, 83); border: 2px;">
@@ -103,5 +127,21 @@
 </div>
 
     </div>
+    <div id="PrecioDolar">
+      Precio dolar
+    </div>
+
+    <script>
+
+      console.log("Hola que tal?")
+      fetch('https://cl.dolarapi.com/v1/cotizaciones/usd')
+      .then(response=>response.json())
+      .then(datos=>{
+        console.log(datos);
+      })
+      document.getElementById("PrecioDolar")
+
+    </script>
+
 </body>
 </html>

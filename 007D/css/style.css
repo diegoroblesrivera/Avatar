@@ -9,3 +9,7 @@ h1{
     padding-left: 50px;
     padding-bottom: 70px;
 }
+
+.card-back{
+    background-image: url(../img/fondo.avif);
+}
