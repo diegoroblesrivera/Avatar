@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div class="container">
+
+        <form>
+  <div class="mb-3">
+    <label for="n1" class="form-label">Numero Uno</label>
+    <input type="number" class="form-control" id="n1" >
+
+  </div>
+  <div class="mb-3">
+    <label for="n2" class="form-label">Numero Dos</label>
+    <input type="number" class="form-control" id="n2" >
+
+  </div>
+
+  
+  
+</form>
+<button  class="btn btn-primary" onclick="suma()">Suma</button>
+<button  class="btn btn-warning" onclick="resta()">Resta</button>
+<button  class="btn btn-success" onclick="multi()">Multiplicacion</button>
+<button  class="btn btn-info" onclick="divi()">Division</button>
+
+    <h3>Resultado: <span id="resultado"></span></h3>
+    </div>
+
+    <script>
+
+        function suma() {
+            let num1=document.getElementById("n1").value;
+            let num2=document.getElementById("n2").value;
+            let result=parseFloat(num1)+parseFloat(num2)
+            document.getElementById("resultado").innerHTML=result;
+        }
+        function resta() {
+            let num1=document.getElementById("n1").value;
+            let num2=document.getElementById("n2").value;
+            let result=parseFloat(num1)-parseFloat(num2)
+            document.getElementById("resultado").innerHTML=result;
+        }
+        function multi() {
+            let num1=document.getElementById("n1").value;
+            let num2=document.getElementById("n2").value;
+            let result=parseFloat(num1)*parseFloat(num2)
+            document.getElementById("resultado").innerHTML=result;
+        }
+        function divi() {
+            let num1=document.getElementById("n1").value;
+            let num2=document.getElementById("n2").value;
+            let result=parseFloat(num1)/parseFloat(num2)
+            document.getElementById("resultado").innerHTML=result;
+        }
+        function suma() {
+            let num1 = 5;
+            let num2 = 10;
+            let resultado = num1 + num2;
+            
+            alert("The sum is: " + resultado);
+        }
+
+    </script>
+
+</body>
+</html>

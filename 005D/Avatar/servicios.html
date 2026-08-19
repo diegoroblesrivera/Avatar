@@ -42,13 +42,14 @@
   </div>
 </nav>
     <h1>Listado de servicios</h1>
+    <div class="container">
     <table class="table table-dark table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
-      <th scope="col">Usuario</th>
+      <th scope="col">Parametro</th>
+      <th scope="col">Valor</th>
+     
     </tr>
   </thead>
   <tbody>
@@ -56,19 +57,25 @@
       <th scope="row">1</th>
       <td>Macos</td>
       <td>Fuentes</td>
-      <td>@mdo</td>
+      
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Terreros</td>
       <td>Thornton</td>
-      <td>@fat</td>
+      
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>John</td>
       <td>Doe</td>
-      <td>@social</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>John</td>
+      <td>Doe</td>
+      
     </tr>
   </tbody>
 </table>
@@ -90,9 +97,21 @@
 
 
 <!-- final de GRID -->
+<h2>Valor venta dolar: $<span id="valorVenta"></span> </h2>
 
-
-
+<form>
+  <div class="mb-3">
+    <label for="n1" class="form-label">Primer numero</label>
+    <input type="number" class="form-control" id="n1" >
+  </div>
+  <div class="mb-3">
+    <label for="n2" class="form-label">Segundo numero</label>
+    <input type="number" class="form-control" id="n2" >
+  </div>
+</form>
+ <button  class="btn btn-primary" onclick="suma()" >Sumar</button>
+ <br>
+ <h3>Resultado: <span id="resultado"></span></h3>
     <ol>
         <li>Lavado</li>
         <li>Aspirado</li>
@@ -105,6 +124,30 @@
     </ol>
       <p>Poniendo otro parrafo para ir probando estilos.</p>
     <p>Poniendo otro parrafo para ir probando estilos.</p>
-   
+
+</div>
+   <script>
+    fetch('https://cl.dolarapi.com/v1/cotizaciones/usd')
+    .then(response=>response.json())
+    .then(datos=>{
+      document.getElementById("valorVenta").innerHTML=datos.venta
+      console.log(datos)
+    })
+
+       function suma() {
+        let num1= document.getElementById("n1").value;
+        let num2= document.getElementById("n2").value;
+        let suma=parseFloat(num1)+parseFloat(num2);
+        console.log(suma)
+        document.getElementById("resultado").innerHTML=suma
+
+
+       }
+
+
+
+
+
+   </script>
 </body>
 </html>

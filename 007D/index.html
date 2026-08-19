@@ -54,6 +54,9 @@
   </div>
 </nav>
     <h1 style="color: rgb(43, 1, 83);">Primer titulo HTML</h1>
+     <p>
+      Precio dolar: <span id="PrecioDolar"></span>
+     </p>
      <div class="container text-center">
   <div class="row" style="border-color:rgb(43, 1, 83); border: 2px;">
     <div class="col-2">
@@ -79,37 +82,58 @@
     <p>Este es otro parrafo diferente</p> 
     <p>Este es otro parrafo diferente</p> 
     </div>
-    
-    <table class="table table-dark table-striped-columns">
+    <div class="container">
+
+      <table class="table table-dark table-striped-columns">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Parametro</th>
+      <th scope="col">Valor</th>
+
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Compra</td>
+      <td><span id="valorCompra"></span></td>
+ 
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Venta</td>
+      <td><span id="valorVenta"></span></td>
+   
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>John</td>
-      <td>Doe</td>
-      <td>@social</td>
+      <td>Nombre</td>
+      <td><span id="valorNombre"></span></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Divisa</td>
+      <td><span id="valorMoneda"></span></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Fecha</td>
+      <td><span id="fecha"></span></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Dolar Obs</td>
+      <td><span id="dolar"></span></td>
+ 
     </tr>
   </tbody>
 </table>
+    </div>
+    
      <div class="container">
          <img src="img/sc.webp" alt="Imgane de muestra">
      </div>
@@ -124,24 +148,50 @@
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
     <a href="#" class="btn btn-primary">Comprar</a>
   </div>
+<br>
+
+
+
 </div>
+<br>
+    
+
+
+
+
+
 
     </div>
-    <div id="PrecioDolar">
-      Precio dolar
-    </div>
+   
 
     <script>
-
+      //captura de datos de una API
       console.log("Hola que tal?")
       fetch('https://cl.dolarapi.com/v1/cotizaciones/usd')
       .then(response=>response.json())
       .then(datos=>{
+        // document.getElementById("PrecioDolar").innerHTML=datos.ultimoCierre;
+        document.getElementById("valorCompra").innerHTML=datos.compra;
+        document.getElementById("valorVenta").innerHTML=datos.venta;
+        document.getElementById("valorMoneda").innerHTML=datos.moneda;
+        document.getElementById("valorNombre").innerHTML=datos.nombre;
+        document.getElementById("fecha").innerHTML=datos.fechaActualizacion.substring(0, 10);
+        document.getElementById("dolar").innerHTML=datos.ultimoCierre;
         console.log(datos);
       })
-      document.getElementById("PrecioDolar")
+     
 
     </script>
-
+  <script>
+    
+        function sumar() {
+            let x = document.getElementById("num1").value;
+            let y = document.getElementById("num2").value;
+            
+            let suma = parseFloat(x) + parseFloat(y);
+            document.getElementById("resultado").innerHTML = suma;
+        }
+   
+  </script>
 </body>
 </html>
